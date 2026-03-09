@@ -95,8 +95,16 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="row">
 
                         <div class="col-lg-8 col-12 mx-auto">
-                            <h1 class="text-white text-center">Discover. Learn. Enjoy</h1>
-
+                            <?php
+                            $hour = date('H');
+                            if ($hour < 12) {
+                                echo "<h1>Dobry rano</h1>";
+                            }elseif ($hour < 18) {
+                                echo"<h1>Dobry den</h1>";
+                            }else{
+                                echo"<h1>Dobry vecer</h1>";
+                            }
+                            ?>
                             <h6 class="text-center">platform for creatives around the world</h6>
 
                             <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
